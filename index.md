@@ -1,4 +1,7 @@
-
+---
+title: "Great coffee with a conscience"
+subtitle: Support sustainable farming while enjoying a cup
+---
 
 # Hugo template for Decap CMS with Identity
 
