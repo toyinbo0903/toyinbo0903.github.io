@@ -8,7 +8,7 @@ contact_entries:
     text: "Monday – Saturday: 9AM – 7PM We’re closed on Sundays"
 ---
 
-Wlove to get in touch with you and hear your ideas and
+Wlov to get in touch with you and hear your ideas and
 questions. We strive to grow and improve constantly and your feedback
 is valuable for us.
 
