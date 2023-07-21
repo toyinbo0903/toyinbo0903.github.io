@@ -32,6 +32,23 @@ subtitle: Support sustainable farming while enjoying a cup
   </body>
 </html>
 
+sequenceDiagram
+    autonumber
+    User->>Database: Request (SQL Query)
+    Database->>Data: Fetch "customer_surveys"
+    loop Calculate Counts
+        Data->>Data: Calculate count of promoters, detractors and total responses
+    end
+    Note right of Data: Created response_counts subquery!
+    Data-->>Database: Return result of subquery
+    Database->>Data: Fetch from response_counts subquery
+    loop Calculate NPS
+        Data->>Data: Calculate NPS based on counts
+    end
+    Note right of Data: Calculated NPS!
+    Data-->>Database: Return result of calculation
+    Database-->>User: Response (NPS Result)
+
 
 <!-- The HTML -->
 <div class="accordion">
