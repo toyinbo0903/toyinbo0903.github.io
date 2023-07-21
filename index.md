@@ -3,9 +3,52 @@ title: "Great coffee with a conscience"
 subtitle: Support sustainable farming while enjoying a cup
 ---
 
-{{< expand "This is a Question?" >}}
-This is an Answer.
-{{< /expand >}}
+<!-- The HTML -->
+<div class="accordion">
+  <div class="accordion-item">
+    <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">Accordion Item 1</span></button>
+    <div id="accordion-content-1" class="accordion-content">
+      Content for Accordion Item 1...
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">Accordion Item 2</span></button>
+    <div id="accordion-content-2" class="accordion-content">
+      Content for Accordion Item 2...
+    </div>
+  </div>
+</div>
+
+<!-- The CSS -->
+<style>
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.accordion .accordion-item button[aria-expanded='true'] + .accordion-content {
+  max-height: 100px;
+}
+</style>
+
+<!-- The JavaScript -->
+<script>
+const buttons = document.querySelectorAll(".accordion .accordion-item button");
+
+buttons.forEach(button => {
+  button.addEventListener("click", () => {
+    const expanded = button.getAttribute("aria-expanded") === "true" || false;
+
+    button.setAttribute("aria-expanded", !expanded);
+
+    const content = button.nextElementSibling;
+    content.style.maxHeight = !expanded ? content.scrollHeight + "px" : 0;
+  });
+});
+</script>
+
 
 
 # Hugo template for Decap CMS with Identity
