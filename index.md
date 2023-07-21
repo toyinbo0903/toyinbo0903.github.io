@@ -3,6 +3,17 @@ title: "Great coffee with a conscience"
 subtitle: Support sustainable farming while enjoying a cup
 ---
 
+<body>
+  Here is a mermaid diagram:
+  <pre class="mermaid">
+        graph TD 
+        A[Client] --> B[Load Balancer] 
+        B --> C[Server01] 
+        B --> D[Server02]
+  </pre>
+</body>
+
+
 <!-- The HTML -->
 <div class="accordion">
   <div class="accordion-item">
