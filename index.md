@@ -49,6 +49,32 @@ buttons.forEach(button => {
 });
 </script>
 
+# Table of Contents
+
+- [Introduction](#introduction)
+- [Chapter 1](#chapter-1)
+- [Chapter 2](#chapter-2)
+  - [Section 2.1](#section-21)
+  - [Section 2.2](#section-22)
+- [Conclusion](#conclusion)
+
+## Introduction
+Your introduction content...
+
+## Chapter 1
+Your chapter 1 content...
+
+## Chapter 2
+Your chapter 2 content...
+
+### Section 2.1
+Your section 2.1 content...
+
+### Section 2.2
+Your section 2.2 content...
+
+## Conclusion
+Your conclusion content...
 
 
 # Hugo template for Decap CMS with Identity
