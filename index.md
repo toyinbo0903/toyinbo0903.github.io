@@ -76,6 +76,62 @@ Your section 2.2 content...
 ## Conclusion
 Your conclusion content...
 
+<!-- HTML -->
+<nav>
+  <div class="hamburger-menu">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#link1">Link 1</a></li>
+    <li><a href="#link2">Link 2</a></li>
+    <li><a href="#link3">Link 3</a></li>
+  </ul>
+</nav>
+
+<!-- CSS -->
+<style>
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
+.hamburger-menu div {
+  width: 2rem;
+  height: 0.25rem;
+  background: currentColor;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .hamburger-menu {
+    display: flex;
+  }
+}
+</style>
+
+<!-- JavaScript -->
+<script>
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+const navLinks = document.querySelector('.nav-links');
+
+hamburgerMenu.addEventListener('click', () => {
+  navLinks.style.display = navLinks.style.display === 'none' ? 'flex' : 'none';
+});
+</script>
+
 
 # Hugo template for Decap CMS with Identity
 
