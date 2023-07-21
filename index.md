@@ -3,31 +3,7 @@ title: "Great coffee with a conscience"
 subtitle: Support sustainable farming while enjoying a cup
 ---
 
-<html>
-  <body>
-    Here is one mermaid diagram:
-    <pre class="mermaid">
-            graph TD 
-            A[Client] --> B[Load Balancer] 
-            B --> C[Server1] 
-            B --> D[Server2]
-    </pre>
-
-    And here is another:
-    <pre class="mermaid">
-            graph TD 
-            A[Client] -->|tcp_123| B
-            B(Load Balancer) 
-            B -->|tcp_456| C[Server1] 
-            B -->|tcp_456| D[Server2]
-    </pre>
-
-    <script type="module">
-      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-      mermaid.initialize({ startOnLoad: true });
-    </script>
-  </body>
-</html>
+[![](https://mermaid.ink/img/pako:eNqNUstuwjAQ_JWtT1SCH8iBC6inChUQt0jI2AtETbxhva6EEP9eO05AQn2QXOxkZnZnNBdlyKIqlMdTQGdwXukD66Z0EB8dhFxodsj5vvHIk-l0rkXvtMcCVonlBUbr5TssA_L5NSMHSI8u4A3FHKFUJnihBnnrA3_h2ZcqE2qiFma6NqHWgjCj4MTnX4PeTesOMwkGtIeWqSFB9mOwKKyNEHvQzoKQ6BoYfUvOYy-JzubDIpKAq8OxU-nlGaO2vXG23RQPPuxOyeLL3eLkIQ0J7BIv1J3ewPgzk31c_ddZP4az-Fj_m0zEQBpmgVyO6SnrA98mgeeNmp5XkXvwGnmpNYmTHcIorbbqqLEs6VVjFRvR6MrGIl6SQKnkiA2WqohHq_kz1eQacamR67MzqhAOOFahtXHbvrT54_UbvRP06A?type=png)](https://mermaid.live/edit#pako:eNqNUstuwjAQ_JWtT1SCH8iBC6inChUQt0jI2AtETbxhva6EEP9eO05AQn2QXOxkZnZnNBdlyKIqlMdTQGdwXukD66Z0EB8dhFxodsj5vvHIk-l0rkXvtMcCVonlBUbr5TssA_L5NSMHSI8u4A3FHKFUJnihBnnrA3_h2ZcqE2qiFma6NqHWgjCj4MTnX4PeTesOMwkGtIeWqSFB9mOwKKyNEHvQzoKQ6BoYfUvOYy-JzubDIpKAq8OxU-nlGaO2vXG23RQPPuxOyeLL3eLkIQ0J7BIv1J3ewPgzk31c_ddZP4az-Fj_m0zEQBpmgVyO6SnrA98mgeeNmp5XkXvwGnmpNYmTHcIorbbqqLEs6VVjFRvR6MrGIl6SQKnkiA2WqohHq_kz1eQacamR67MzqhAOOFahtXHbvrT54_UbvRP06A)
 
 
 <!-- The HTML -->
