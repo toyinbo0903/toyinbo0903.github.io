@@ -100,9 +100,16 @@ FROM responses;
     H --> J[Subtract % of Detractors from Promoters]
     I --> J
     J --> K[Result: NPS Score]
+    </pre>
+
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+      mermaid.initialize({ startOnLoad: true });
+    </script>
+  </body>
+</html>
     </div>
   </div>
-</div>
 
 <!-- The CSS -->
 <style>
