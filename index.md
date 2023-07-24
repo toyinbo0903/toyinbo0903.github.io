@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Technical Writing Assessment
 date: 2017-01-04T15:04:10.000Z
 description: >-
@@ -7,7 +8,7 @@ description: >-
 
 <html>
   <body>
-    Here is one mermaid iagram:
+    Here is one mermaid diagram:
     <pre class="mermaid">
             sequenceDiagram
     autonumber
