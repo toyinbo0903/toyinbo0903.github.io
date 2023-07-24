@@ -16,6 +16,24 @@ description: >-
 
 ### Definition of NPS
 
+The Net Promoter Score (NPS) is a widely used metric that measures customer satisfaction and loyalty. It's calculated based on the responses to a single question:
+
+> "On a scale of 0-10, how likely are you to recommend our company/product/service to a friend or colleague?"
+
+The responses are classified into three categories:
+
+-   Promoters (score 9-10): These are customers who are loyal enthusiasts. They are likely to continue purchasing and refer others, thus fueling growth.
+
+-   Passives (score 7-8): These are customers who are satisfied but unenthusiastic. They are vulnerable to competitive offerings.
+
+-   Detractors (score 0-6): These are customers who are unhappy with their experience. They could potentially damage the brand through negative word-of-mouth.
+
+The Net Promoter Score is calculated by subtracting the percentage of customers who are Detractors from the percentage who are Promoters. It's a simple gauge of customer's overall perception of a brand and an indicator of growth potential.
+
+```
+NPS = %Promoters - %Detractors
+```
+
 
 
 
