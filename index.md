@@ -49,12 +49,7 @@ SELECT
    SUM(CASE WHEN score <= 6 THEN 1 ELSE 0 END) / COUNT(*)) * 100 AS nps
 FROM responses;
 ```
-<!-- The HTML -->
-<div class="accordion">
-  <div class="accordion-item">
-    <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">Sequence Diagram</span></button>
-    <div id="accordion-content-1" class="accordion-content">
-      <html>
+<html>
   <body>
     Entity relationship diagram:
     <pre class="mermaid">
@@ -82,74 +77,6 @@ FROM responses;
     </script>
   </body>
 </html>
-    </div>
-  </div>
-
-  <!-- The HTML -->
-<div class="accordion">
-  <div class="accordion-item">
-    <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">Sequence Diagram</span></button>
-    <div id="accordion-content-1" class="accordion-content">
-      <html>
-  <body>
-    Entity relationship diagram:
-    <pre class="mermaid">
-            sequenceDiagram
-    autonumber
-    User->>Database: Request (SQL Query for NPS calculation)
-    Database->>Data: Fetch data from "responses" table
-    loop Calculate Counts
-        Data->>Data: Calculate count of promoters (score >= 9), detractors (score <= 6), and total responses
-    end
-    Note right of Data: Created promoters_count, detractors_count, and total_responses!
-    Data-->>Database: Return result of count calculations
-    Database->>Data: Fetch count of promoters, detractors and total responses
-    loop Calculate NPS
-        Data->>Data: Calculate NPS based on counts (promoters - detractors / total_responses * 100)
-    end
-    Note right of Data: Calculated NPS!
-    Data-->>Database: Return result of NPS calculation
-    Database-->>User: Response (NPS Result)
-    </pre>
-
-    <script type="module">
-      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-      mermaid.initialize({ startOnLoad: true });
-    </script>
-  </body>
-</html>
-    </div>
-  </div>
-
-
-<!-- The CSS -->
-<style>
-.accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-}
-
-.accordion .accordion-item button[aria-expanded='true'] + .accordion-content {
-  max-height: 100px;
-}
-</style>
-
-<!-- The JavaScript -->
-<script>
-const buttons = document.querySelectorAll(".accordion .accordion-item button");
-
-buttons.forEach(button => {
-  button.addEventListener("click", () => {
-    const expanded = button.getAttribute("aria-expanded") === "true" || false;
-
-    button.setAttribute("aria-expanded", !expanded);
-
-    const content = button.nextElementSibling;
-    content.style.maxHeight = !expanded ? content.scrollHeight + "px" : 0;
-  });
-});
-</script>
 
 
 
