@@ -4,13 +4,11 @@ subtitle: How to calculate the Key Performance
 Indicator (KPI) Net Promoter Score using SQL
 date: 2023-07-21
 author: Olamide Toyinbo
-description: >-
-  This assessment is to create a technical document in markdown and also share the rendered output. This technical documentation should explain how to calculate the Key Performance Indicator (KPI) Net Promotor Score using SQL
 ---
 
 <html>
   <body>
-    Here is one mermaid diagram:
+    Here is one mermaid iagram:
     <pre class="mermaid">
             sequenceDiagram
     autonumber
