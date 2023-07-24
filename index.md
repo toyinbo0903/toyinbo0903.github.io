@@ -58,26 +58,22 @@ FROM responses;
   <body>
     Entity relationship diagram:
     <pre class="mermaid">
-            erDiagram
-    CUSTOMER ||--o{ SURVEY-RESPONSE : "provides"
-    CUSTOMER {
-        string customerID PK "The customer's unique ID"
-        string firstName "Customer's first name"
-        string lastName "Customer's last name"
-        string email "Customer's email"
-    }
-    SURVEY-RESPONSE {
-        string surveyID PK "Unique survey ID"
-        string customerID FK "Foreign key linking to customer"
-        int npsScore "Net Promoter Score"
-        date responseDate "Date of the response"
-    }
-    PRODUCT ||--o{ SURVEY-RESPONSE : "is related to"
-    PRODUCT {
-        string productID PK "Unique product ID"
-        string productName "Name of the product"
-        string productCategory "Category of the product"
-    }
+            sequenceDiagram
+    autonumber
+    User->>Database: Request (SQL Query for NPS calculation)
+    Database->>Data: Fetch data from "responses" table
+    loop Calculate Counts
+        Data->>Data: Calculate count of promoters (score >= 9), detractors (score <= 6), and total responses
+    end
+    Note right of Data: Created promoters_count, detractors_count, and total_responses!
+    Data-->>Database: Return result of count calculations
+    Database->>Data: Fetch count of promoters, detractors and total responses
+    loop Calculate NPS
+        Data->>Data: Calculate NPS based on counts (promoters - detractors / total_responses * 100)
+    end
+    Note right of Data: Calculated NPS!
+    Data-->>Database: Return result of NPS calculation
+    Database-->>User: Response (NPS Result)
     </pre>
 
     <script type="module">
