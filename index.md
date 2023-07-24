@@ -1,5 +1,4 @@
 ---
-layout: section
 title: "Technical Writing Assessment"
 subtitle: How to calculate the Key Performance 
 Indicator (KPI) Net Promoter Score using SQL
