@@ -96,6 +96,52 @@ GROUP BY month;
 
 ### Data Sources Required to Implement NPS
 
+To calculate NPS, you need specific data that's usually derived from surveys, customer interactions, and customer databases. Here's a more detailed look at the type of data you'll need:
+
+1.  Customer Survey Data: This is typically obtained through a dedicated survey tool or integrated survey module within your CRM or customer experience platform. You'll need to ensure that your survey tool can provide you with the raw score data on a per-response basis, as well as any other metadata or customer attributes that are collected during the survey. These might include timestamps, geographic data, product or service usage details, and so on.
+
+2.  Customer Relationship Management (CRM) Data: CRM systems are a treasure trove of customer data and insights. They can provide historical data about a customer's interactions and transactions with your company, which can be crucial in understanding and interpreting your NPS results. For instance, a low NPS score from a customer who has had several recent support tickets could suggest problems with your support function.
+
+3.  Customer IDs: These unique identifiers are essential to ensure that each survey response is linked to a specific customer. This helps avoid counting multiple responses from the same customer and allows for more detailed analysis, such as tracking NPS changes over time for individual customers or correlating NPS scores with other customer characteristics or behaviors.
+
+4.  NPS Scores: These are the core data for calculating NPS. Each customer is asked to give a score, typically on a scale from 0 to 10, indicating how likely they are to recommend your company, product, or service to others. The actual question can vary slightly, but the key is that it asks about the likelihood of the customer acting as a promoter for your company.
+
+5.  Customer Segmentation Data: This data is useful for breaking down and analyzing your NPS by different customer segments. This might include demographic data (like age, location, industry), behavioral data (like product usage, purchase history), or psychographic data (like customer attitudes or preferences).
+
+Collecting, integrating, and analyzing this data can require significant data infrastructure and expertise. However, the insights gained from a well-implemented NPS program can provide substantial benefits in understanding and improving customer satisfaction and loyalty.
+
+### Explanation of the Data Relationships
+
+<html>
+  <body>
+    Here is one mermaid diagram:
+    <pre class="mermaid">
+            sequenceDiagram
+    autonumber
+    User->>Database: Request (SQL Query)
+    Database->>Customer: Fetch "Customer" details
+    Database->>Product: Fetch "Product" details
+    Database->>SurveyResponse: Fetch "Survey-Response" details
+    loop Calculate Counts
+        SurveyResponse->>SurveyResponse: Calculate count of promoters, detractors and total responses
+    end
+    Note right of SurveyResponse: Created response_counts subquery!
+    SurveyResponse-->>Database: Return result of subquery
+    Database->>SurveyResponse: Fetch from response_counts subquery
+    loop Calculate NPS
+        SurveyResponse->>SurveyResponse: Calculate NPS based on counts
+    end
+    Note right of SurveyResponse: Calculated NPS!
+    SurveyResponse-->>Database: Return result of calculation
+    Database-->>User: Response (NPS Result)
+    </pre>
+
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+      mermaid.initialize({ startOnLoad: true });
+    </script>
+  </body>
+</html>
 
 
 
