@@ -12,9 +12,8 @@ description: >-
 - [Business Use Cases of NPS](#business-use-cases-of-nps)
 - [Data Sources Required to Implement NPS](#data-sources-required-to-implement-nps)
 - [Explanation of the Data Relationships](#explanation-of-the-data-relationships)
-- [Sample SQL Queries Relevant to NPS](#sample-sql-queries-relevant-to-nps)
 
-### Definition of NPS
+## Definition of NPS
 
 The Net Promoter Score (NPS) is a widely used metric that measures customer satisfaction and loyalty. It's calculated based on the responses to a single question:
 
@@ -35,7 +34,7 @@ NPS = %Promoters - %Detractors
 ```
 Net Promoter Score (NPS) is calculated by subtracting the percentage of Detractors from the percentage of Promoters.
 
-### Business Use Cases of NPS
+## Business Use Cases of NPS
 
 The Net Promoter Score (NPS) is a widely used market research metric that typically takes the form of a single survey question asking respondents to rate the likelihood that they would recommend a company, product, or service to a friend or colleague. The NPS is calculated based on responses to a single question: How likely is it that you would recommend our company/product/service to a friend or colleague?
 
@@ -50,6 +49,83 @@ SELECT
    SUM(CASE WHEN score <= 6 THEN 1 ELSE 0 END) / COUNT(*)) * 100 AS nps
 FROM responses;
 ```
+<!-- The HTML -->
+<div class="accordion">
+  <div class="accordion-item">
+    <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">Sequence Diagram</span></button>
+    <div id="accordion-content-1" class="accordion-content">
+      <html>
+  <body>
+    Entity relationship diagram:
+    <pre class="mermaid">
+            erDiagram
+    CUSTOMER ||--o{ SURVEY-RESPONSE : "provides"
+    CUSTOMER {
+        string customerID PK "The customer's unique ID"
+        string firstName "Customer's first name"
+        string lastName "Customer's last name"
+        string email "Customer's email"
+    }
+    SURVEY-RESPONSE {
+        string surveyID PK "Unique survey ID"
+        string customerID FK "Foreign key linking to customer"
+        int npsScore "Net Promoter Score"
+        date responseDate "Date of the response"
+    }
+    PRODUCT ||--o{ SURVEY-RESPONSE : "is related to"
+    PRODUCT {
+        string productID PK "Unique product ID"
+        string productName "Name of the product"
+        string productCategory "Category of the product"
+    }
+    </pre>
+
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+      mermaid.initialize({ startOnLoad: true });
+    </script>
+  </body>
+</html>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">Accordion Item 2</span></button>
+    <div id="accordion-content-2" class="accordion-content">
+      Content for Accordion Item 2...
+    </div>
+  </div>
+</div>
+
+<!-- The CSS -->
+<style>
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.accordion .accordion-item button[aria-expanded='true'] + .accordion-content {
+  max-height: 100px;
+}
+</style>
+
+<!-- The JavaScript -->
+<script>
+const buttons = document.querySelectorAll(".accordion .accordion-item button");
+
+buttons.forEach(button => {
+  button.addEventListener("click", () => {
+    const expanded = button.getAttribute("aria-expanded") === "true" || false;
+
+    button.setAttribute("aria-expanded", !expanded);
+
+    const content = button.nextElementSibling;
+    content.style.maxHeight = !expanded ? content.scrollHeight + "px" : 0;
+  });
+});
+</script>
+
 
 2.  NPS By Product/Service: Calculate NPS for each of your products or services, to understand which ones are performing well and which ones might need improvement.
 
@@ -94,7 +170,7 @@ GROUP BY month;
 -   The `product` and `customer_segment` columns categorize the responses.
 -   The `response_date` column contains the date of each response.
 
-### Data Sources Required to Implement NPS
+## Data Sources Required to Implement NPS
 
 To calculate NPS, you need specific data that's usually derived from surveys, customer interactions, and customer databases. Here's a more detailed look at the type of data you'll need:
 
@@ -110,7 +186,7 @@ To calculate NPS, you need specific data that's usually derived from surveys, cu
 
 Collecting, integrating, and analyzing this data can require significant data infrastructure and expertise. However, the insights gained from a well-implemented NPS program can provide substantial benefits in understanding and improving customer satisfaction and loyalty.
 
-### Explanation of the Data Relationships
+## Explanation of the Data Relationships
 
 <html>
   <body>
@@ -145,7 +221,7 @@ Collecting, integrating, and analyzing this data can require significant data in
   </body>
 </html>
 
-**Entities and their attributes**:
+### Entities and their attributes:
 
 1.  CUSTOMER: This entity represents the customers of the business.
 
@@ -165,7 +241,7 @@ Collecting, integrating, and analyzing this data can require significant data in
     -   `productName`: The name of the product.
     -   `productCategory`: The category that the product belongs to.
 
-**Relationships between the entities**:
+### Relationships between the entities:
 
 1.  CUSTOMER - SURVEY-RESPONSE: The relationship here is one-to-many, as represented by "||--o{". This means one customer can provide multiple survey responses, but each survey response can be provided by only one customer.
 
