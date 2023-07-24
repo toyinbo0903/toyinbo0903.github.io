@@ -5,6 +5,24 @@ description: >-
   This assessment is to create a technical document in markdown and also share the rendered output. This technical documentation should explain how to calculate the Key Performance Indicator (KPI) Net Promotor Score using SQL
 ---
 
+# Table of Contents
+
+- [Definition of the KPI](#definition-of-the-kpi)
+- [Business Use Cases of the KPI](#business-use-cases-of-the-kpi)
+- [Data Sources Required to Implement the KPI](#data-sources-required-to-implement-the-kpi)
+- [Explanation of the Data Relationships](#explanation-of-the-data-relationships)
+- [Sample SQL Queries Relevant to this KPI](#sample-sql-queries-that-would-be-relevant-to-this-kpi)
+
+
+
+
+
+
+
+
+
+
+
 <html>
   <body>
     Here is one mermaid ddiagram:
