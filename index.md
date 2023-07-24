@@ -116,24 +116,26 @@ Collecting, integrating, and analyzing this data can require significant data in
   <body>
     Here is one mermaid diagram:
     <pre class="mermaid">
-            sequenceDiagram
-    autonumber
-    User->>Database: Request (SQL Query)
-    Database->>Customer: Fetch "Customer" details
-    Database->>Product: Fetch "Product" details
-    Database->>SurveyResponse: Fetch "Survey-Response" details
-    loop Calculate Counts
-        SurveyResponse->>SurveyResponse: Calculate count of promoters, detractors and total responses
-    end
-    Note right of SurveyResponse: Created response_counts subquery!
-    SurveyResponse-->>Database: Return result of subquery
-    Database->>SurveyResponse: Fetch from response_counts subquery
-    loop Calculate NPS
-        SurveyResponse->>SurveyResponse: Calculate NPS based on counts
-    end
-    Note right of SurveyResponse: Calculated NPS!
-    SurveyResponse-->>Database: Return result of calculation
-    Database-->>User: Response (NPS Result)
+            erDiagram
+    CUSTOMER ||--o{ SURVEY-RESPONSE : "provides"
+    CUSTOMER {
+        string customerID PK "The customer's unique ID"
+        string firstName "Customer's first name"
+        string lastName "Customer's last name"
+        string email "Customer's email"
+    }
+    SURVEY-RESPONSE {
+        string surveyID PK "Unique survey ID"
+        string customerID FK "Foreign key linking to customer"
+        int npsScore "Net Promoter Score"
+        date responseDate "Date of the response"
+    }
+    PRODUCT ||--o{ SURVEY-RESPONSE : "is related to"
+    PRODUCT {
+        string productID PK "Unique product ID"
+        string productName "Name of the product"
+        string productCategory "Category of the product"
+    }
     </pre>
 
     <script type="module">
