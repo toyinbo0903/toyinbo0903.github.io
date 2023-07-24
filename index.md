@@ -4,6 +4,7 @@ date: 2017-01-04T15:04:10.000Z
 description: >-
   This assessment is to create a technical document in markdown and also share the rendered output. This technical documentation should explain how to calculate the Key Performance Indicator (KPI) Net Promotor Score using SQL
 ---
+# How to calculate Net Promoter Score (NPS) using SQL
 
 # Table of Contents
 
