@@ -86,9 +86,20 @@ FROM responses;
   </div>
 
   <div class="accordion-item">
-    <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">Accordion Item 2</span></button>
+    <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">Flowchart Diagram</span></button>
     <div id="accordion-content-2" class="accordion-content">
-      Content for Accordion Item 2...
+      flowchart LR
+    A[Calculate NPS Score] --> B{{SQL Query}}
+    B -->|Execute Query| id1[(Database)]
+    id1 --> D{Customer's Rating}
+    D -->|9 or 10| E[Promoters]
+    D -->|7 or 8| F[Passives]
+    D -->|6 or below| G[Detractors]
+    E --> H[Calculate % of Promoters]
+    G --> I[Calculate % of Detractors]
+    H --> J[Subtract % of Detractors from Promoters]
+    I --> J
+    J --> K[Result: NPS Score]
     </div>
   </div>
 </div>
