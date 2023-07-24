@@ -1,5 +1,4 @@
 ---
-layout: index
 title: Technical Writing Assessment
 date: 2017-01-04T15:04:10.000Z
 description: >-
@@ -8,7 +7,7 @@ description: >-
 
 <html>
   <body>
-    Here is one mermaid tiagram:
+    Here is one mermaid ddiagram:
     <pre class="mermaid">
             sequenceDiagram
     autonumber
