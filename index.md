@@ -4,17 +4,17 @@ date: 2017-01-04T15:04:10.000Z
 description: >-
   This assessment is to create a technical document in markdown and also share the rendered output. This technical documentation should explain how to calculate the Key Performance Indicator (KPI) Net Promotor Score using SQL
 ---
-# How to calculate Net Promoter Score (NPS) using SQL
+# How to Calculate Net Promoter Score (NPS) Using SQL
 
-# Table of Contents
+## Table of Contents
 
-- [Definition of the KPI](#definition-of-the-kpi)
-- [Business Use Cases of the KPI](#business-use-cases-of-the-kpi)
-- [Data Sources Required to Implement the KPI](#data-sources-required-to-implement-the-kpi)
+- [Definition of NPS](#definition-of-nps)
+- [Business Use Cases of NPS](#business-use-cases-of-nps)
+- [Data Sources Required to Implement NPS](#data-sources-required-to-implement-nps)
 - [Explanation of the Data Relationships](#explanation-of-the-data-relationships)
-- [Sample SQL Queries Relevant to this KPI](#sample-sql-queries-that-would-be-relevant-to-this-kpi)
+- [Sample SQL Queries Relevant to NPS](#sample-sql-queries-relevant-to-nps)
 
-
+### Definition of NPS
 
 
 
