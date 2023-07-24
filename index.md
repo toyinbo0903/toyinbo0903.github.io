@@ -30,10 +30,10 @@ The responses are classified into three categories:
 
 The Net Promoter Score is calculated by subtracting the percentage of customers who are Detractors from the percentage who are Promoters. It's a simple gauge of customer's overall perception of a brand and an indicator of growth potential.
 
-```
+```m
 NPS = %Promoters - %Detractors
 ```
-
+This formula represents that the Net Promoter Score (NPS) is calculated by subtracting the percentage of Detractors from the percentage of Promoters.
 
 
 
