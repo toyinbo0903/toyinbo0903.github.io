@@ -204,8 +204,7 @@ Collecting, integrating, and analyzing this data can require significant data in
 
 
 
+<a href="http://www.example.com" class="btn btn-primary">Metric: NPS</a>
 
-
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/decaporg/one-click-hugo-cms&stack=cms)
+[Link Display Text](./path-to-file/file.md)
 
