@@ -8,7 +8,7 @@ description: >-
 
 <html>
   <body>
-    Here is one mermaid diagram:
+    Here is one mermaid tiagram:
     <pre class="mermaid">
             sequenceDiagram
     autonumber
