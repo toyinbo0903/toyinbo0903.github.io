@@ -85,21 +85,31 @@ FROM responses;
     </div>
   </div>
 
+  <!-- The HTML -->
+<div class="accordion">
   <div class="accordion-item">
-    <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">Flowchart Diagram</span></button>
-    <div id="accordion-content-2" class="accordion-content">
-      flowchart LR
-    A[Calculate NPS Score] --> B{{SQL Query}}
-    B -->|Execute Query| id1[(Database)]
-    id1 --> D{Customer's Rating}
-    D -->|9 or 10| E[Promoters]
-    D -->|7 or 8| F[Passives]
-    D -->|6 or below| G[Detractors]
-    E --> H[Calculate % of Promoters]
-    G --> I[Calculate % of Detractors]
-    H --> J[Subtract % of Detractors from Promoters]
-    I --> J
-    J --> K[Result: NPS Score]
+    <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">Sequence Diagram</span></button>
+    <div id="accordion-content-1" class="accordion-content">
+      <html>
+  <body>
+    Entity relationship diagram:
+    <pre class="mermaid">
+            sequenceDiagram
+    autonumber
+    User->>Database: Request (SQL Query for NPS calculation)
+    Database->>Data: Fetch data from "responses" table
+    loop Calculate Counts
+        Data->>Data: Calculate count of promoters (score >= 9), detractors (score <= 6), and total responses
+    end
+    Note right of Data: Created promoters_count, detractors_count, and total_responses!
+    Data-->>Database: Return result of count calculations
+    Database->>Data: Fetch count of promoters, detractors and total responses
+    loop Calculate NPS
+        Data->>Data: Calculate NPS based on counts (promoters - detractors / total_responses * 100)
+    end
+    Note right of Data: Calculated NPS!
+    Data-->>Database: Return result of NPS calculation
+    Database-->>User: Response (NPS Result)
     </pre>
 
     <script type="module">
@@ -110,6 +120,7 @@ FROM responses;
 </html>
     </div>
   </div>
+
 
 <!-- The CSS -->
 <style>
@@ -139,6 +150,8 @@ buttons.forEach(button => {
   });
 });
 </script>
+
+
 
 
 2.  NPS By Product/Service: Calculate NPS for each of your products or services, to understand which ones are performing well and which ones might need improvement.
