@@ -204,7 +204,5 @@ Collecting, integrating, and analyzing this data can require significant data in
 
 
 
-<a href="http://www.example.com" class="btn btn-primary">Metric: NPS</a>
-
-[Link Display Text](./path-to-file/file.md)
+[Link Display Text](./page.md)
 
