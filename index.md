@@ -114,7 +114,7 @@ Collecting, integrating, and analyzing this data can require significant data in
 
 <html>
   <body>
-    Here is one mermaid diagram:
+    Entity relationship diagram:
     <pre class="mermaid">
             erDiagram
     CUSTOMER ||--o{ SURVEY-RESPONSE : "provides"
@@ -145,7 +145,31 @@ Collecting, integrating, and analyzing this data can require significant data in
   </body>
 </html>
 
+**Entities and their attributes**:
 
+1.  CUSTOMER: This entity represents the customers of the business.
+
+    -   `customerID`: The unique ID for each customer.
+    -   `firstName`: The first name of the customer.
+    -   `lastName`: The last name of the customer.
+    -   `email`: The email address of the customer.
+2.  SURVEY-RESPONSE: This entity represents the responses received from customers for the surveys conducted by the business.
+
+    -   `surveyID`: The unique ID for each survey.
+    -   `customerID`: The unique ID of the customer who provided the response, which links back to the CUSTOMER entity.
+    -   `npsScore`: The Net Promoter Score received from the customer. This score is used to gauge the customer's overall satisfaction with a company's product or service and the customer's loyalty to the brand.
+    -   `responseDate`: The date when the response was received.
+3.  PRODUCT: This entity represents the products of the business.
+
+    -   `productID`: The unique ID for each product.
+    -   `productName`: The name of the product.
+    -   `productCategory`: The category that the product belongs to.
+
+**Relationships between the entities**:
+
+1.  CUSTOMER - SURVEY-RESPONSE: The relationship here is one-to-many, as represented by "||--o{". This means one customer can provide multiple survey responses, but each survey response can be provided by only one customer.
+
+2.  PRODUCT - SURVEY-RESPONSE: The relationship here is also one-to-many, as represented by "||--o{". This means one product can be related to multiple survey responses (a customer may review the same product more than once), but each survey response is related to only one product.
 
 
 
