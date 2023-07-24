@@ -33,9 +33,68 @@ The Net Promoter Score is calculated by subtracting the percentage of customers 
 ```m
 NPS = %Promoters - %Detractors
 ```
-This formula represents that the Net Promoter Score (NPS) is calculated by subtracting the percentage of Detractors from the percentage of Promoters.
+Net Promoter Score (NPS) is calculated by subtracting the percentage of Detractors from the percentage of Promoters.
+
+### Business Use Cases of NPS
+
+The Net Promoter Score (NPS) is a widely used market research metric that typically takes the form of a single survey question asking respondents to rate the likelihood that they would recommend a company, product, or service to a friend or colleague. The NPS is calculated based on responses to a single question: How likely is it that you would recommend our company/product/service to a friend or colleague?
+
+In terms of business use cases, SQL could be used to calculate the NPS based on survey data stored in a relational database, and then further analyze that data. Here are some use cases:
+
+1.  Calculate NPS Score: With a SQL query, you can calculate the NPS of your company. Promoters are customers who rate your company 9 or 10, passives rate you 7 or 8, and detractors rate you 6 or below. The NPS is the percentage of promoters minus the percentage of detractors.
+
+```sql
+
+SELECT
+  (SUM(CASE WHEN score >= 9 THEN 1 ELSE 0 END) / COUNT(*) -
+   SUM(CASE WHEN score <= 6 THEN 1 ELSE 0 END) / COUNT(*)) * 100 AS nps
+FROM responses;
+```
+
+2.  NPS By Product/Service: Calculate NPS for each of your products or services, to understand which ones are performing well and which ones might need improvement.
+
+```sql
+
+SELECT
+  product,
+  (SUM(CASE WHEN score >= 9 THEN 1 ELSE 0 END) / COUNT(*) -
+   SUM(CASE WHEN score <= 6 THEN 1 ELSE 0 END) / COUNT(*)) * 100 AS nps
+FROM responses
+GROUP BY product;
+```
+
+3.  NPS By Customer Segment: Calculate NPS for different customer segments, to understand the customer experience across different segments.
+
+```sql
+
+SELECT
+  customer_segment,
+  (SUM(CASE WHEN score >= 9 THEN 1 ELSE 0 END) / COUNT(*) -
+   SUM(CASE WHEN score <= 6 THEN 1 ELSE 0 END) / COUNT(*)) * 100 AS nps
+FROM responses
+GROUP BY customer_segment;
+```
+
+4.  NPS Over Time: Monitor NPS over time to identify trends and see if customer satisfaction is improving or deteriorating.
+
+```sql
+
+SELECT
+  DATE_TRUNC('month', response_date) as month,
+  (SUM(CASE WHEN score >= 9 THEN 1 ELSE 0 END) / COUNT(*) -
+   SUM(CASE WHEN score <= 6 THEN 1 ELSE 0 END) / COUNT(*)) * 100 AS nps
+FROM responses
+GROUP BY month;
+```
+> **NOTE:** These queries are based on the following assumptions:
 
 
+-   There is a table named `responses` that contains your survey responses.
+-   This table has a column named `score` which holds the NPS rating (on a scale of 0-10).
+-   The `product` and `customer_segment` columns categorize the responses.
+-   The `response_date` column contains the date of each response.
+
+### Data Sources Required to Implement NPS
 
 
 
