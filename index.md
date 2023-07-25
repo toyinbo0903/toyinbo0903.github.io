@@ -1,8 +1,9 @@
 ---
+layout: default
 title: Technical Writing Assessment
 date: 2017-01-04T15:04:10.000Z
 description: >-
-  This assessment is to create a technical document in markdown and also share the rendered output. This technical documentation should explain how to calculate the Key Performance Indicator (KPI) Net Promotor Score using SQL
+  This assessment is to create a technical document in markdown and also share the rendered output. This technical documentation should explain how to calculate the Key Performance Indicator (KPI) Net Promoter Score using SQL
 ---
 # Calculate Net Promoter Score (NPS) Using SQL
 
@@ -211,3 +212,26 @@ Collecting, integrating, and analyzing this data can require significant data in
 
 [Metric: NPS](./page.md)
 
+<!--
+---------------------------------------------------
+FEEDBACK
+---------------------------------------------------
+Add comments here:
+
+If you suspect a bug, please edit your issue description to include the BUG REPORT INFORMATION shown below. If you fail to provide this information within 7 days, we cannot debug your issue and will close it. We will, however, reopen it if you later provide the information.
+
+---------------------------------------------------
+BUG REPORT INFORMATION
+---------------------------------------------------
+Use the commands below to provide key information from your environment:
+You do NOT have to include this information if this is a FEATURE REQUEST
+
+
+**- Do you want to request a *feature* or report a *bug*?**
+
+**- What is the current behavior?**
+
+**- If the current behavior is a bug, please provide the steps to reproduce.**
+
+**- What is the expected behavior?**
+-->
