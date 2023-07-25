@@ -40,7 +40,7 @@ The Net Promoter Score (NPS) is a widely used market research metric that typica
 
 In terms of business use cases, SQL could be used to calculate the NPS based on survey data stored in a relational database, and then further analyze that data. Here are some use cases:
 
-1.  Calculate NPS Score: With a SQL query, you can calculate the NPS of your company. Promoters are customers who rate your company 9 or 10, passives rate you 7 or 8, and detractors rate you 6 or below. The NPS is the percentage of promoters minus the percentage of detractors.
+Calculate NPS Score: With a SQL query, you can calculate the NPS of your company. Promoters are customers who rate your company 9 or 10, passives rate you 7 or 8, and detractors rate you 6 or below. The NPS is the percentage of promoters minus the percentage of detractors.
 
 ```sql
 
@@ -81,7 +81,7 @@ FROM responses;
 
 
 
-2.  NPS By Product/Service: Calculate NPS for each of your products or services, to understand which ones are performing well and which ones might need improvement.
+NPS By Product/Service: Calculate NPS for each of your products or services, to understand which ones are performing well and which ones might need improvement.
 
 ```sql
 
@@ -93,9 +93,7 @@ FROM responses
 GROUP BY product;
 ```
 
-[![](https://mermaid.ink/img/pako:eNptk11vmzAUhv_KkaVKm9RK7c3WclFpDVmbNl8N65XpxQEfVjTAyB9pUch_nzHZUgXgxgc_73teY3vHUimIBSwr5Hv6hsrAfBNX4J4fPDKufoWLi1u42-1mgiqTZw3USgqbGsBKgE6lIsiULEGRrmWlSYPBpKD9vre56_Tt9INSawieLammhVxc8S8hOhA1fX3tSffR9wp5dHQ1bwT_wAMXeseeuQGpABO5pRamfCJt5XJpWDupNKT0iOR7J7lu4ecnHLXOtzRGf-vohNzfaeH-qAjJKEyN_N9h6qM_8AkWqS3QLTV6WYDMBlHuPTgbggPLB08-8jDf5mLoB0kDRhosYLJ6Wf46iGZe9HQiOnqPqx69av4p1NlY9iePLU6xQfK555Y8somfOcX6rR1tseilfbH0xYovbGHyumhgQ9oNuzVcXV4eFCsPrXk_F8ByHUG_dzWpzr87rI4dvuyclaRKzIW7ALvOLWbuvJUUs8ANBao_MYurvePQGhk1VcoCoyydM1sLt_wwx98KSxZkWGja_wUATxDd?type=png)](https://mermaid.live/edit#pako:eNptk11vmzAUhv_KkaVKm9RK7c3WclFpDVmbNl8N65XpxQEfVjTAyB9pUch_nzHZUgXgxgc_73teY3vHUimIBSwr5Hv6hsrAfBNX4J4fPDKufoWLi1u42-1mgiqTZw3USgqbGsBKgE6lIsiULEGRrmWlSYPBpKD9vre56_Tt9INSawieLammhVxc8S8hOhA1fX3tSffR9wp5dHQ1bwT_wAMXeseeuQGpABO5pRamfCJt5XJpWDupNKT0iOR7J7lu4ecnHLXOtzRGf-vohNzfaeH-qAjJKEyN_N9h6qM_8AkWqS3QLTV6WYDMBlHuPTgbggPLB08-8jDf5mLoB0kDRhosYLJ6Wf46iGZe9HQiOnqPqx69av4p1NlY9iePLU6xQfK555Y8somfOcX6rR1tseilfbH0xYovbGHyumhgQ9oNuzVcXV4eFCsPrXk_F8ByHUG_dzWpzr87rI4dvuyclaRKzIW7ALvOLWbuvJUUs8ANBao_MYurvePQGhk1VcoCoyydM1sLt_wwx98KSxZkWGja_wUATxDd)
-
-3.  NPS By Customer Segment: Calculate NPS for different customer segments, to understand the customer experience across different segments.
+NPS By Customer Segment: Calculate NPS for different customer segments, to understand the customer experience across different segments.
 
 ```sql
 
@@ -106,9 +104,13 @@ SELECT
 FROM responses
 GROUP BY customer_segment;
 ```
-[![](https://mermaid.ink/img/pako:eNqNkcFqAyEQhl9lmGPJXnooVDZ7ydJjCOyxhiDuJFmq66JjIIS8e9210KYIrR6U8fu_Ubyhdj2hwMCKqR3UyStbXZ7lCGksRdAxsLPkD4FOlkY-GOcmqOt5aZpMvj_toaoaeCPW581XoMt8JkonS6Soz5ly5zm0UUZHk2638846Jh9AwHCEoJ0naNbw-m9DS-yVZveoqNfwkhWFVg_57a77Bf4w_kGmyoK0Q5iMui5AaeIK0yOsGvr0VbdZIpHPZEmiSNte-Q-JcrwnTkV23XXUKNhHWmGc-u-fRXFUJtD9Ex05rew?type=png)](https://mermaid.live/edit#pako:eNqNkcFqAyEQhl9lmGPJXnooVDZ7ydJjCOyxhiDuJFmq66JjIIS8e9210KYIrR6U8fu_Ubyhdj2hwMCKqR3UyStbXZ7lCGksRdAxsLPkD4FOlkY-GOcmqOt5aZpMvj_toaoaeCPW581XoMt8JkonS6Soz5ly5zm0UUZHk2638846Jh9AwHCEoJ0naNbw-m9DS-yVZveoqNfwkhWFVg_57a77Bf4w_kGmyoK0Q5iMui5AaeIK0yOsGvr0VbdZIpHPZEmiSNte-Q-JcrwnTkV23XXUKNhHWmGc-u-fRXFUJtD9Ex05rew)
 
-4.  NPS Over Time: Monitor NPS over time to identify trends and see if customer satisfaction is improving or deteriorating.
+<p align="center">
+  <img src="./site/static/img/nps.png" alt="NPS By Customer Segment">
+</p>
+
+
+NPS Over Time: Monitor NPS over time to identify trends and see if customer satisfaction is improving or deteriorating.
 
 ```sql
 
