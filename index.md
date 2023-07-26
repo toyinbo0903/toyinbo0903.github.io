@@ -50,7 +50,7 @@ The NPS is calculated based on responses to a single question: How likely is it 
 In terms of business use cases, SQL could be used to calculate the NPS based on survey data stored in a relational database, and then further analyze that data. 
 <br>
 
-### Here are some use cases:
+### Use cases:
 
 - **Calculate NPS Score**: With a SQL query, you can calculate the NPS of your company. Promoters are customers who rate your company 9 or 10, passives rate you 7 or 8, and detractors rate you 6 or below.<br><br>The NPS is the percentage of promoters minus the percentage of detractors.<br><br>
 
@@ -94,7 +94,6 @@ FROM responses;
 </html>
 
 <br>
-<br>
 
 - **NPS By Product or Service**: Calculate NPS for each of your products or services, to understand which ones are performing well and which ones might need improvement.<br><br>
 
@@ -107,7 +106,6 @@ SELECT
 FROM responses
 GROUP BY product;
 ```
-<br>
 <br>
 
 - **NPS By Customer Segment**: Calculate NPS for different customer segments, to understand the customer experience across different segments.<br><br>
@@ -122,13 +120,11 @@ FROM responses
 GROUP BY customer_segment;
 ```
 <br>
-<br>
 
 <p align="center">
   <img src="./site/static/img/nps.png" alt="NPS By Customer Segment">
 </p>
 
-<br>
 <br>
 
 - **NPS Over Time**: Monitor NPS over time to identify trends and see if customer satisfaction is improving or deteriorating.<br><br>
@@ -208,7 +204,6 @@ To calculate NPS, you need specific data that's usually derived from surveys, cu
 </html>
 
 <br>
-<br>
 
 ### Entities and their attributes:
 
@@ -230,7 +225,6 @@ To calculate NPS, you need specific data that's usually derived from surveys, cu
     -   `productName`: The name of the product.
     -   `productCategory`: The category that the product belongs to.
 
-<br>
 <br>
 
 ### Relationships between the entities:
