@@ -46,7 +46,7 @@ In terms of business use cases, SQL could be used to calculate the NPS based on 
 
 ### Here are some use cases:
 
-1. **Calculate NPS Score**: With a SQL query, you can calculate the NPS of your company. Promoters are customers who rate your company 9 or 10, passives rate you 7 or 8, and detractors rate you 6 or below.<br><br>The NPS is the percentage of promoters minus the percentage of detractors.<br><br>
+- **Calculate NPS Score**: With a SQL query, you can calculate the NPS of your company. Promoters are customers who rate your company 9 or 10, passives rate you 7 or 8, and detractors rate you 6 or below.<br><br>The NPS is the percentage of promoters minus the percentage of detractors.<br><br>
 
 ```sql
 
@@ -79,8 +79,7 @@ FROM responses;
     Data-->>Database: Return result of NPS calculation
     Database-->>User: Response (NPS Result)
     </pre>
-<br>
-<br>
+
     <script type="module">
       import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
       mermaid.initialize({ startOnLoad: true });
@@ -88,7 +87,7 @@ FROM responses;
   </body>
 </html>
 
-2. **NPS By Product or Service**: Calculate NPS for each of your products or services, to understand which ones are performing well and which ones might need improvement.<br><br>
+- **NPS By Product or Service**: Calculate NPS for each of your products or services, to understand which ones are performing well and which ones might need improvement.<br><br>
 
 ```sql
 
@@ -100,7 +99,7 @@ FROM responses
 GROUP BY product;
 ```
 
-3. **NPS By Customer Segment**: Calculate NPS for different customer segments, to understand the customer experience across different segments.<br><br>
+- **NPS By Customer Segment**: Calculate NPS for different customer segments, to understand the customer experience across different segments.<br><br>
 
 ```sql
 
@@ -111,13 +110,14 @@ SELECT
 FROM responses
 GROUP BY customer_segment;
 ```
+<br>
+<br>
 
 <p align="center">
   <img src="./site/static/img/nps.png" alt="NPS By Customer Segment">
 </p>
 
-
-4. **NPS Over Time**: Monitor NPS over time to identify trends and see if customer satisfaction is improving or deteriorating.<br><br>
+- **NPS Over Time**: Monitor NPS over time to identify trends and see if customer satisfaction is improving or deteriorating.<br><br>
 
 ```sql
 
