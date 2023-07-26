@@ -5,6 +5,7 @@ description: >-
   This assessment is to create a technical document in markdown and also share the rendered output. This technical documentation should explain how to calculate the Key Performance Indicator (KPI) Net Promoter Score using SQL
 ---
 # Calculate Net Promoter Score (NPS) Using SQL
+<br>
 
 ## Table of Contents
 
@@ -12,6 +13,8 @@ description: >-
 - [Business Use Cases of NPS](#business-use-cases-of-nps)
 - [Data Sources Required to Implement NPS](#data-sources-required-to-implement-nps)
 - [Explanation of the Data Relationships](#explanation-of-the-data-relationships)
+
+<br>
 
 ## Definition of NPS
 
@@ -35,6 +38,8 @@ It's a simple gauge of customer's overall perception of a brand and an indicator
 NPS = %Promoters - %Detractors
 ```
 Net Promoter Score (NPS) is calculated by subtracting the percentage of Detractors from the percentage of Promoters.
+<br>
+<br>
 
 ## Business Use Cases of NPS
 
@@ -43,6 +48,7 @@ The Net Promoter Score (NPS) is a widely used market research metric that typica
 The NPS is calculated based on responses to a single question: How likely is it that you would recommend our company, product or service to a friend or colleague?
 
 In terms of business use cases, SQL could be used to calculate the NPS based on survey data stored in a relational database, and then further analyze that data. 
+<br>
 
 ### Here are some use cases:
 
@@ -87,6 +93,9 @@ FROM responses;
   </body>
 </html>
 
+<br>
+<br>
+
 - **NPS By Product or Service**: Calculate NPS for each of your products or services, to understand which ones are performing well and which ones might need improvement.<br><br>
 
 ```sql
@@ -98,6 +107,8 @@ SELECT
 FROM responses
 GROUP BY product;
 ```
+<br>
+<br>
 
 - **NPS By Customer Segment**: Calculate NPS for different customer segments, to understand the customer experience across different segments.<br><br>
 
@@ -117,6 +128,9 @@ GROUP BY customer_segment;
   <img src="./site/static/img/nps.png" alt="NPS By Customer Segment">
 </p>
 
+<br>
+<br>
+
 - **NPS Over Time**: Monitor NPS over time to identify trends and see if customer satisfaction is improving or deteriorating.<br><br>
 
 ```sql
@@ -128,6 +142,8 @@ SELECT
 FROM responses
 GROUP BY month;
 ```
+<br>
+
 > **NOTE:** These queries are based on the following assumptions:
 
 
@@ -135,6 +151,9 @@ GROUP BY month;
 -   This table has a column named `score` which holds the NPS rating (on a scale of 0-10).
 -   The `product` and `customer_segment` columns categorize the responses.
 -   The `response_date` column contains the date of each response.
+
+<br>
+<br>
 
 ## Data Sources Required to Implement NPS
 
@@ -149,6 +168,9 @@ To calculate NPS, you need specific data that's usually derived from surveys, cu
 4. **NPS Scores**: These are the core data for calculating NPS. Each customer is asked to give a score, typically on a scale from 0 to 10, indicating how likely they are to recommend your company, product, or service to others.<br><br>The actual question can vary slightly, but the key is that it asks about the likelihood of the customer acting as a promoter for your company.
 
 5. **Customer Segmentation Data**: This data is useful for breaking down and analyzing your NPS by different customer segments.<br><br>This might include demographic data (like age, location, industry), behavioral data (like product usage, purchase history), or psychographic data (like customer attitudes or preferences).<br><br>Collecting, integrating, and analyzing this data can require significant data infrastructure and expertise. However, the insights gained from a well-implemented NPS program can provide substantial benefits in understanding and improving customer satisfaction and loyalty.
+
+<br>
+<br>
 
 ## Explanation of the Data Relationships
 
@@ -185,6 +207,9 @@ To calculate NPS, you need specific data that's usually derived from surveys, cu
   </body>
 </html>
 
+<br>
+<br>
+
 ### Entities and their attributes:
 
 1.  CUSTOMER: This entity represents the customers of the business.
@@ -204,6 +229,9 @@ To calculate NPS, you need specific data that's usually derived from surveys, cu
     -   `productID`: The unique ID for each product.
     -   `productName`: The name of the product.
     -   `productCategory`: The category that the product belongs to.
+
+<br>
+<br>
 
 ### Relationships between the entities:
 
