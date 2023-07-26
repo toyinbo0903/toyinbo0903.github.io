@@ -60,7 +60,7 @@ FROM responses;
 
 <html>
   <body>
-    Sequence diagram:
+    Sequence Diagram:
     <pre class="mermaid">
             sequenceDiagram
     autonumber
@@ -79,7 +79,8 @@ FROM responses;
     Data-->>Database: Return result of NPS calculation
     Database-->>User: Response (NPS Result)
     </pre>
-
+<br>
+<br>
     <script type="module">
       import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
       mermaid.initialize({ startOnLoad: true });
