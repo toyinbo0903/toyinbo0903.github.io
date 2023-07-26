@@ -147,7 +147,7 @@ You'll need to ensure that your survey tool can provide you with the raw score d
 
 These might include timestamps, geographic data, product or service usage details, and so on.
 <br>
-<br>
+
 2.  **Customer Relationship Management (CRM) Data**: CRM systems are a treasure trove of customer data and insights. 
 
 They can provide historical data about a customer's interactions and transactions with your company, which can be crucial in understanding and interpreting your NPS results. 
