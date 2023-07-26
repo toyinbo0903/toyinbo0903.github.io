@@ -55,6 +55,9 @@ SELECT
    SUM(CASE WHEN score <= 6 THEN 1 ELSE 0 END) / COUNT(*)) * 100 AS nps
 FROM responses;
 ```
+<br>
+<br>
+
 <html>
   <body>
     Sequence diagram:
