@@ -146,21 +146,25 @@ To calculate NPS, you need specific data that's usually derived from surveys, cu
 You'll need to ensure that your survey tool can provide you with the raw score data on a per-response basis, as well as any other metadata or customer attributes that are collected during the survey. 
 
 These might include timestamps, geographic data, product or service usage details, and so on.
-
+<br>
+<br>
 2.  **Customer Relationship Management (CRM) Data**: CRM systems are a treasure trove of customer data and insights. 
 
 They can provide historical data about a customer's interactions and transactions with your company, which can be crucial in understanding and interpreting your NPS results. 
 
 For instance, a low NPS score from a customer who has had several recent support tickets could suggest problems with your support function.
-
+<br>
+<br>
 3.  **Customer IDs**: These unique identifiers are essential to ensure that each survey response is linked to a specific customer. 
 
 This helps avoid counting multiple responses from the same customer and allows for more detailed analysis, such as tracking NPS changes over time for individual customers or correlating NPS scores with other customer characteristics or behaviors.
-
+<br>
+<br>
 4.  **NPS Scores**: These are the core data for calculating NPS. Each customer is asked to give a score, typically on a scale from 0 to 10, indicating how likely they are to recommend your company, product, or service to others. 
 
 The actual question can vary slightly, but the key is that it asks about the likelihood of the customer acting as a promoter for your company.
-
+<br>
+<br>
 5.  **Customer Segmentation Data**: This data is useful for breaking down and analyzing your NPS by different customer segments. 
 
 This might include demographic data (like age, location, industry), behavioral data (like product usage, purchase history), or psychographic data (like customer attitudes or preferences).
