@@ -27,20 +27,28 @@ The responses are classified into three categories:
 
 -   Detractors (score 0-6): These are customers who are unhappy with their experience. They could potentially damage the brand through negative word-of-mouth.
 
-The Net Promoter Score is calculated by subtracting the percentage of customers who are Detractors from the percentage who are Promoters. It's a simple gauge of customer's overall perception of a brand and an indicator of growth potential.
+The Net Promoter Score is calculated by subtracting the percentage of customers who are Detractors from the percentage who are Promoters. 
 
-```bash
+It's a simple gauge of customer's overall perception of a brand and an indicator of growth potential.
+
+```shell
 NPS = %Promoters - %Detractors
 ```
 Net Promoter Score (NPS) is calculated by subtracting the percentage of Detractors from the percentage of Promoters.
 
 ## Business Use Cases of NPS
 
-The Net Promoter Score (NPS) is a widely used market research metric that typically takes the form of a single survey question asking respondents to rate the likelihood that they would recommend a company, product, or service to a friend or colleague. The NPS is calculated based on responses to a single question: How likely is it that you would recommend our company/product/service to a friend or colleague?
+The Net Promoter Score (NPS) is a widely used market research metric that typically takes the form of a single survey question asking respondents to rate the likelihood that they would recommend a company, product, or service to a friend or colleague. 
 
-In terms of business use cases, SQL could be used to calculate the NPS based on survey data stored in a relational database, and then further analyze that data. Here are some use cases:
+The NPS is calculated based on responses to a single question: How likely is it that you would recommend our company, product or service to a friend or colleague?
 
-Calculate NPS Score: With a SQL query, you can calculate the NPS of your company. Promoters are customers who rate your company 9 or 10, passives rate you 7 or 8, and detractors rate you 6 or below. The NPS is the percentage of promoters minus the percentage of detractors.
+In terms of business use cases, SQL could be used to calculate the NPS based on survey data stored in a relational database, and then further analyze that data. 
+
+### Here are some use cases:
+
+**Calculate NPS Score**: With a SQL query, you can calculate the NPS of your company. Promoters are customers who rate your company 9 or 10, passives rate you 7 or 8, and detractors rate you 6 or below. 
+
+The NPS is the percentage of promoters minus the percentage of detractors.
 
 ```sql
 
@@ -81,7 +89,7 @@ FROM responses;
 
 
 
-NPS By Product/Service: Calculate NPS for each of your products or services, to understand which ones are performing well and which ones might need improvement.
+**NPS By Product or Service**: Calculate NPS for each of your products or services, to understand which ones are performing well and which ones might need improvement.
 
 ```sql
 
@@ -93,7 +101,7 @@ FROM responses
 GROUP BY product;
 ```
 
-NPS By Customer Segment: Calculate NPS for different customer segments, to understand the customer experience across different segments.
+**NPS By Customer Segment**: Calculate NPS for different customer segments, to understand the customer experience across different segments.
 
 ```sql
 
@@ -110,7 +118,7 @@ GROUP BY customer_segment;
 </p>
 
 
-NPS Over Time: Monitor NPS over time to identify trends and see if customer satisfaction is improving or deteriorating.
+**NPS Over Time**: Monitor NPS over time to identify trends and see if customer satisfaction is improving or deteriorating.
 
 ```sql
 
@@ -131,17 +139,31 @@ GROUP BY month;
 
 ## Data Sources Required to Implement NPS
 
-To calculate NPS, you need specific data that's usually derived from surveys, customer interactions, and customer databases. Here's a more detailed look at the type of data you'll need:
+To calculate NPS, you need specific data that's usually derived from surveys, customer interactions, and customer databases.
 
-1.  Customer Survey Data: This is typically obtained through a dedicated survey tool or integrated survey module within your CRM or customer experience platform. You'll need to ensure that your survey tool can provide you with the raw score data on a per-response basis, as well as any other metadata or customer attributes that are collected during the survey. These might include timestamps, geographic data, product or service usage details, and so on.
+1.  **Customer Survey Data**: This is typically obtained through a dedicated survey tool or integrated survey module within your CRM or customer experience platform. 
 
-2.  Customer Relationship Management (CRM) Data: CRM systems are a treasure trove of customer data and insights. They can provide historical data about a customer's interactions and transactions with your company, which can be crucial in understanding and interpreting your NPS results. For instance, a low NPS score from a customer who has had several recent support tickets could suggest problems with your support function.
+You'll need to ensure that your survey tool can provide you with the raw score data on a per-response basis, as well as any other metadata or customer attributes that are collected during the survey. 
 
-3.  Customer IDs: These unique identifiers are essential to ensure that each survey response is linked to a specific customer. This helps avoid counting multiple responses from the same customer and allows for more detailed analysis, such as tracking NPS changes over time for individual customers or correlating NPS scores with other customer characteristics or behaviors.
+These might include timestamps, geographic data, product or service usage details, and so on.
 
-4.  NPS Scores: These are the core data for calculating NPS. Each customer is asked to give a score, typically on a scale from 0 to 10, indicating how likely they are to recommend your company, product, or service to others. The actual question can vary slightly, but the key is that it asks about the likelihood of the customer acting as a promoter for your company.
+2.  **Customer Relationship Management (CRM) Data**: CRM systems are a treasure trove of customer data and insights. 
 
-5.  Customer Segmentation Data: This data is useful for breaking down and analyzing your NPS by different customer segments. This might include demographic data (like age, location, industry), behavioral data (like product usage, purchase history), or psychographic data (like customer attitudes or preferences).
+They can provide historical data about a customer's interactions and transactions with your company, which can be crucial in understanding and interpreting your NPS results. 
+
+For instance, a low NPS score from a customer who has had several recent support tickets could suggest problems with your support function.
+
+3.  **Customer IDs**: These unique identifiers are essential to ensure that each survey response is linked to a specific customer. 
+
+This helps avoid counting multiple responses from the same customer and allows for more detailed analysis, such as tracking NPS changes over time for individual customers or correlating NPS scores with other customer characteristics or behaviors.
+
+4.  **NPS Scores**: These are the core data for calculating NPS. Each customer is asked to give a score, typically on a scale from 0 to 10, indicating how likely they are to recommend your company, product, or service to others. 
+
+The actual question can vary slightly, but the key is that it asks about the likelihood of the customer acting as a promoter for your company.
+
+5.  **Customer Segmentation Data**: This data is useful for breaking down and analyzing your NPS by different customer segments. 
+
+This might include demographic data (like age, location, industry), behavioral data (like product usage, purchase history), or psychographic data (like customer attitudes or preferences).
 
 Collecting, integrating, and analyzing this data can require significant data infrastructure and expertise. However, the insights gained from a well-implemented NPS program can provide substantial benefits in understanding and improving customer satisfaction and loyalty.
 
