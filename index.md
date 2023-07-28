@@ -1,6 +1,7 @@
 ---
 title: Technical Writing Assessment
 date: 2017-01-04T15:04:10.000Z
+author: Olamide Toyinbo
 description: >-
   This assessment is to create a technical document in markdown and also share the rendered output. This technical documentation should explain how to calculate the Key Performance Indicator (KPI) Net Promoter Score using SQL
 ---
@@ -16,7 +17,7 @@ description: >-
 
 <br>
 
-## Definition of NPS
+## Definition of Net Promoter Score (NPS)
 
 The Net Promoter Score (NPS) is a widely used metric that measures customer satisfaction and loyalty. It's calculated based on the responses to a single question:
 
